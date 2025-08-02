@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PagVendas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 onclick="main()">PagVendas</h1>
+    </header>
+
+    <div class="start">
+        <div class="create">
+            <h1>Criar pagamento</h1>
+            <select name="" id="tipoPagamento">
+                <option value="Débito">Débito</option>
+                <option value="Crédito">Crédito</option>
+            </select>
+            <input type="number" id="valorPagamento" placeholder="Valor">
+
+            <button onclick="confirmCreate()">Confirm</button>
+        </div>
+    </div>
+
+    <div class="load">
+        <img src="https://paladins-draft.com/img/circle_loading.gif" alt="loading-gif | WpFASTER" class=" nofocus">
+        <p onclick="fail()">PROCESSANDO</p>
+    </div>
+
+    <div class="payment">
+        <h1 id="tipo"></h1>
+        <h1 id="valor"></h2>
+        
+        <div class="container">
+            <input type="password" readonly onclick="this.blur()" id="display" class="display"/>
+
+            <div class="keypad">
+                <div class="numbers">
+                    <button onclick="press('1')">1</button>
+                    <button onclick="press('2')">2</button>
+                    <button onclick="press('3')">3</button>
+                    <button onclick="press('4')">4</button>
+                    <button onclick="press('5')">5</button>
+                    <button onclick="press('6')">6</button>
+                    <button onclick="press('7')">7</button>
+                    <button onclick="press('8')">8</button>
+                    <button onclick="press('9')">9</button>
+                    <button onclick="press('0')">0</button>
+                </div>
+                <div class="controls">
+                    <button onclick="erase()" style="background-color: yellow;">C</button>
+                    <button onclick="clearDisplay()" style="background-color: red;">X</button>
+                    <button onclick="confirm()" style="background-color: limegreen;">></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fail">
+        <img src="https://cdn-icons-png.flaticon.com/512/4168/4168781.png" alt="Fail!">
+        <p>FALHA NO PROCESSAMENTO.</p>
+        <p onclick="result()">(ERROR: 1061)</p>
+    </div>
+
+    <div class="result">
+        <p id="pass"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

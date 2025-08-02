@@ -1,0 +1,188 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    user-select: none;
+    cursor: default;
+}
+
+body {
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    color: white;
+    background-color: lime;
+    padding: 1rem;
+}
+
+
+
+/* CREATE */
+.start {
+    margin-top: 40%; /* Move 20px para baixo */
+}
+.create, .result {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.create h1, .result h1 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.create select, .create input {
+  font-size: 16px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  background-color: #fff;
+  transition: border 0.3s;
+}
+
+.create select:focus, .create input:focus {
+  border-color: #3f51b5;
+}
+
+.create button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.create button:hover {
+  background-color: #303f9f;
+}
+
+
+
+/* PAYMENT */
+.payment, .golpe, .create {
+    background-color: white;
+    text-align: center;
+    padding: 1rem;
+    gap: 2rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    line-height: 50px;
+}
+
+.display {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #b1e7df;
+
+    font-size: 2rem;
+    text-align: center;
+
+    width: 95%;
+    pointer-events: none;
+}
+
+.keypad {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+.keypad > .numbers {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 3px;
+    margin-top: 20px;
+}
+.keypad > .controls {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.keypad button {
+    height: 70px;
+    width: 95px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: white;
+    
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid rgba(211, 211, 211, 0.61);
+}
+
+
+
+/* LOADSCREEN */
+.load {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, lime, lime);
+    color: white;
+    z-index: -1;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.load img {
+    width: 120px;
+}
+
+
+/* FAIL */
+.fail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, red, red);
+    color: white;
+    z-index: -1;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.fail img {
+    width: 120px;
+    height: 120px;
+}
+
+
+/* RESULT */
+.result {
+    text-align: center;
+}
